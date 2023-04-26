@@ -25,14 +25,14 @@ class Main {
       //s.addStudent(new Student("Janusz", 40));
       if (choose==1)
         {
-        System.out.println("Wprowadź imię i nazwisko studenta: ");
-        String imienazwisko = scanner.next();
-        int wiek = scanner.next();   
-        scanner.close();
-        s.addStudent(new Student(imienazwisko, wiek ));
+        Scanner scanner2=new Scanner(System.in); // bo jak sie podaje inty a potem stringi to musi byc inny obiekt (a wczesniej podawales chose czyli int)
+        System.out.println("Wprowadź imię studenta: ");
+        String imie = scanner2.nextLine();
+        System.out.println("Wprowadz wiek: ");
+        int wiek = scanner.nextInt();   
+        s.addStudent(new Student(imie, wiek ));
         }
-      else if (choose==0)
-        {
+      else  {
         System.out.println("Zamykanie :)");
         scanner.close();
         System.exit(0);
