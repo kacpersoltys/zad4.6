@@ -61,7 +61,7 @@ class Main {
                     System.out.println("Nieprawidłowy wybór.");
             }
         } catch (IOException e) {
-            System.out.println("Błąd" + e.getMessage());
+            System.out.println("Błąd" +  e.getMessage());
         }
     }
 }
