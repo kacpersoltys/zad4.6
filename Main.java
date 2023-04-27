@@ -11,6 +11,7 @@ import java.util.Scanner;
 import java.io.IOException;
 
 class Main {
+  
   public static void main(String[] args) {
     try {
       System.out.println("1.Dodaj nowego studenta");
@@ -39,7 +40,7 @@ class Main {
         for (Student current : students) {
           System.out.println(current.ToString());
         }
-      } else if (choose = 3) {
+      } else if (choose == 3) {
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("Wprowadz imię studenta, którego chcesz wyszukac: ");
         String imie = scanner2.nextLine();

@@ -30,7 +30,7 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) throws IOException {
+public Student findStudentByName(String name) throws IOException {
     var f = new FileReader("db.txt");
     var reader = new BufferedReader(f);
     String line = " ";
@@ -41,10 +41,10 @@ public class Service {
       var student = Student.Parse(line);
       if (student.GetName().equals(name)) {
         reader.close();
-        return null;
+        return student;
       }
     }
-    
+    reader.close();
     return null;
-  }
+}
 }
